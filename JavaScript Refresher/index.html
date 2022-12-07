@@ -8,7 +8,148 @@
 </head>
 <body>
     <script>
+
+        /*  
+        There are two types variables in the javascript
+        1] local 
+        2] global
+
+        How we can make the variables?
+        we can use var , let , const for making the variables 
+
+        *  var - It's globally declare
+        *  let - The lets keyword use in locally (e.g   you can meke one let variable in function and with same name 
+        you can also create the another let variavle in onther function so you can do this , But you cannot do 
+        this with var function)
+        *  const - Its always constant variavle you can not chnage this in whole program.
+
+
+        There two types of data types in the javascript
+        1] primitive
+        2] non-primitive
+
+        The basic differnece between the primitive and non-primitive are the 
+        primitive are immutable 
+        non-primitive are mutable
+
+        immutable means those value cannot change after the creation 
+        mutable means those value which can be change after the creation 
+
+
+        1] primitive data types are
+               string - represents the string
+               number - numeric value 
+               boolean - its use for only true or false
+               undefined - represents the undefined value
+               null - no value at all
+
+        2] non-primitive data types are
+                object 
+                array 
+                RegExp
+        */
+
+        // string e.g
+        let str = "Rohit";
+        console.log(str);
+
+        // number e.g
+        let num = 34;
+        console.log(num);
+
+        // boolean e.g
+        let bool = true;
+        console.log(bool);
+
+        // null e.g
+        let nu = null;
+        console.log(nu);
+
+        // undefined e.g
+        console.log(undefined);
+
+
+        // object e.g
+        const person = {
+            firstName: "Rohit",
+            lastName: "Bhadane",
+            interest: "web dev",
+            age: 19
+        }
+        console.log(person);
+
+        // array e.g
+        const friends = ["Rohit" , "Sumit" , "Sahil" , "Raj"];
+        console.log(friends);
+
+        const points = new Array(50 , 100 , 1);
+        console.log(points);
+
+
+
+        /*
+        There are 3 ways of writing function in javascript
+               1] function declaration
+               2] function expression
+               3] arrow function
+        */
+
+        // function declaration
+           function add1(a , b){
+            console.log(a+b);
+           }
+
+           add1(3 , 5);
+
+        // function expression
+            const add2 = function (a ,  b){
+                console.log(a+b);
+            }
+           
+            add2(5 , 6);
+
         
+        // arrow function
+           const add3 = (a , b) => a + b;
+           console.log(add3(9 , 7));
+
+           const check = (r , j) =>{
+
+             if(r > j)
+                 return "r is greater";
+             else 
+                 return "j is greater";
+           }
+
+           console.log(check( 4 , 1));
+
+
+
+           /*
+           Events in the javascript
+           what is the event - The event means the javascript interaction with the html, we can handle the 
+           html using javascript with the help of events.
+           */
+           
+           document.addEventListener("click" , function click(){
+            console.log("clicked");
+            alert("you now click the header");
+           })
+
+           document.addEventListener("click" , function click(){
+            console.log("clicked");
+
+            let conf = confirm ("are you sure");
+            console.log(conf);
+           })
+
+           setTimeout(() => {
+               console.log("This is me");
+           }, 3000);
+           console.log("This is the after the me");
+
     </script>
+
+    <h1>This is the heading</h1>
 </body>
 </html>
