@@ -1,5 +1,5 @@
 # lets-learn-react
-lets learn the react from basic to advance. The main source of learning is youtube , and some other platforms.
+lets learn the react from basic to advance. The source of learning is CodeWithHarry.
 
 # Getting Started with Create React App
 
