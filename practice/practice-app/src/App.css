@@ -5,13 +5,34 @@ body{
 
 .Nav{
   background-color: bisque;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   text-align: center;
 }
 
 .Nav a{
   padding: 12px;
   font-size: 20px;
-  text-decoration: none;
-  
+  text-decoration: none; 
+  color: black;
+}
+
+.Nav a:hover{
+  color: brown;
+  background-color: aquamarine;
+  border-radius: 12px;
+}
+
+.container{
+  color: white;
+  margin: 12px;
+  text-align: center;
+}
+
+.container .heading:hover{
+  color: aqua;
+  cursor: pointer;
+}
+
+img{
+  width: 50%;
 }
