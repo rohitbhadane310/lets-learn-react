@@ -1,25 +1,45 @@
+
 import React from "react";
-import '../App.css';
 
-export default function Navbar(){
-    return(
+export default function Navbar(props) {
+    return (
         <>
-        <div className="Nav">
-        <a href="/">Home</a>
-        <a href="/">about</a>
-        <a href="/">contact</a>
-        <a href="/">feedback</a>
-        </div>
-
-        <div className="container">
-            <div className="heading">
-                <h1>This is my first website on react</h1>
-            </div>
-            <div className="para">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit eius consequuntur odio, cumque illo itaque harum et unde nulla veritatis eaque expedita quam facere rem, totam accusamus, culpa voluptas.s</p>
-                <img src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" alt="" />
-            </div>
-        </div> 
+            <nav className="navbar navbar-expand-lg bg-light">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="/">{props.Navbar}</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="/">{props.Home}</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Link</a>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="/">Action</a></li>
+                                    <li><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><a className="dropdown-item" href="/">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link disabled">Disabled</a>
+                            </li>
+                        </ul>
+                        <form className="d-flex" role="search">
+                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button className="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
         </>
     )
 }

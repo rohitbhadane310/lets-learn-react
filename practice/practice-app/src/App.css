@@ -1,38 +1,7 @@
-
 body{
-  background-color: rgb(46, 44, 44);
-}
-
-.Nav{
-  background-color: bisque;
-  /* border: 2px solid red; */
-  text-align: center;
-}
-
-.Nav a{
-  padding: 12px;
-  font-size: 20px;
-  text-decoration: none; 
-  color: black;
-}
-
-.Nav a:hover{
-  color: brown;
-  background-color: aquamarine;
-  border-radius: 12px;
+  background-color: rgb(43, 40, 40);
 }
 
 .container{
-  color: white;
-  margin: 12px;
-  text-align: center;
-}
-
-.container .heading:hover{
   color: aqua;
-  cursor: pointer;
-}
-
-img{
-  width: 50%;
 }
