@@ -5,16 +5,51 @@ import { useState } from 'react';
 export default function TextForm(props) {
 
     const handleUpClick = () => {
-        console.log("Uppercase was clicked" + text);
+        console.log("upperCase was clicked" + text);
         let newText = text.toUpperCase();
         setText(newText);
     }
 
     const handleLoClick = () => {
-        console.log("Uppercase was clicked" + text);
+        console.log("lowerCase was clicked" + text);
         let newText = text.toLowerCase();
         setText(newText);
     }
+
+    const handleClearClick = () => {
+        console.log("clear the text" + text);
+        let newText = "";
+        setText(newText);
+    }
+
+    const handleReverseClick = () => {
+        console.log("reverse the text" + text);
+        let newText = () =>{
+            let arr = text.split("");
+            let output = [];
+            for(let i = arr.length-1; i >= 0; i--)
+            {
+                output.push(arr[i]);
+            }
+            return output.join("");
+        };
+        setText(newText);
+    }
+
+    const handleCapitalizeClick = () => {
+        console.log("capitalizeClick" + text);
+        let newText = () =>{
+            let finalStrArr = []
+            let strArr = text.split(" ")
+            strArr.forEach(element =>{
+                finalStrArr.push(element.charAt(0).toUpperCase()+ element.slice(1));
+            });
+            let finalStr = finalStrArr.join(" ")
+            return finalStr;
+        }
+        setText(newText);
+    }
+
 
     const handleOnChange = (event) => {
         console.log("On change");
@@ -28,8 +63,11 @@ export default function TextForm(props) {
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" ></textarea>
                 </div>
-                <button className="btn btn-primary" onClick={handleUpClick}>Convert to UpperCase</button>
-                <button className="btn btn-primary mx-5" onClick={handleLoClick}>Convert to LowerCase</button>
+                <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
+                <button className="btn btn-primary mx-2" onClick={handleClearClick}>clear Text</button>
+                <button className="btn btn-primary mx-2" onClick={handleCapitalizeClick}>Captialize each word</button>
+                <button className="btn btn-primary mx-2" onClick={handleReverseClick}>reverse words</button>
             </div>
             <div className="container my-4">
                 <h1>your text summary</h1>
@@ -41,3 +79,24 @@ export default function TextForm(props) {
         </>
     )
 }
+
+
+
+
+// let newText = () =>{
+//         let newString = "";
+//        for(let i = text.length-1; i>=0; i--){
+//            newString += text[i];
+//        }
+//        return newString;
+//     };
+//     setText(newText);
+
+// let strArr = text.split("");
+//         let arr = [];
+//         for(let i = strArr.length-1; i>=0; i--)
+//         {
+//             arr.push(arr[i]);
+//         }
+//         let newText = arr.join("");
+//         setText(newText);
