@@ -8,6 +8,9 @@ export default function Form() {
                 <label for="exampleFormControlTextarea1" class="form-label">write here</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
             </div>
+            <div className="container">
+            <button type="button" className="btn btn-primary">upper</button>
+            </div>
         </div>
         </>
     )
