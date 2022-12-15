@@ -1,15 +1,11 @@
 
-import React from 'react';
-import Navbar from './components/Navbar';
-import Form from './components/Form';
-import './App.css'
+import React from "react";
+import About from "./components/About";
 
-export default function app()
-{
+export default function app(){
   return(
     <>
-    <Navbar Home = "TextUtils"/>
-    <Form/>
+    <About/>
     </>
   )
 }
