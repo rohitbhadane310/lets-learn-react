@@ -7,22 +7,32 @@ import TextForm from './components/TextForm';
 
 function App() {
   const [mode, setMode] = useState('light');
+  const [alert , setAlert] = useState(null);
+
+  const showAlert = (message , type) =>{
+    setAlert({
+      msg: message,
+      type: type
+    })
+  }
 
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = 'black';
+      showAlert("Dark mode has been enabled" , "success");
     }
     else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
+      showAlert("light mode has been enabled" , "success");
     }
   }
 
   return (
     <>
       <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />
-      <Alert Alert ="This is alert"/>
+      <Alert alert ={alert}/>
       {/* <Navbar title = "textUtils" aboutText = "About textUtils"/> */}
       <div className="container my-3">
         {/* <TextForm heading = "Enter the text to analyze below"/> */}
