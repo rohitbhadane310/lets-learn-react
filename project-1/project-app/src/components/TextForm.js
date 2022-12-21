@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useState } from 'react';
 
@@ -87,7 +86,7 @@ export default function TextForm(props) {
 }
 
 
-
+// {text.replace(/ /g,"").length}
 // text.split(" ").length
 
 // let newText = () =>{
