@@ -10,7 +10,8 @@ import {
   Routes,
   Route,
   Link
-} from "react-router-dom";
+} from "react-router-dom"
+
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -42,14 +43,14 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <Routes>
-            <Route exact path='/about' element={<About/>}></Route>
-            <Route exact path='/' element={<TextForm/>} showAlert={showAlert} mode={mode} />
-          </Routes>
-        </div>
+        {/* <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+        <Alert alert={alert} /> */}
+        <Routes>
+          {/* <div className="container my-3"> */}
+            <Route  path='/about' element={<About />} />
+            <Route  path='/' element={<TextForm />} />
+          {/* </div> */}
+        </Routes>
       </Router>
     </>
   );
@@ -61,3 +62,4 @@ export default App;
 
 
 // aboutText="About"
+// showAlert={showAlert} mode={mode}
